@@ -2,10 +2,10 @@
 Description 
 Create a programme that generates a random password based on the user's preferences. This app will run in the browser and use your JavaScript code to dynamically change the HTML and CSS. It will also have a sophisticated user experience and will be responsive, meaning it will adjust to different screen sizes.
 
-App functions 
+App functions </br>
 
-GIVEN I need a new, secure password 
-WHEN I click the button to generate a password 
+GIVEN I need a new, secure password  </br>
+WHEN I click the button to generate a password  </br>
 THEN I am presented with a series of prompts for password criteria WHEN prompted for password criteria 
 THEN I select which criteria to include in the password 
 WHEN prompted for the length of the password 
