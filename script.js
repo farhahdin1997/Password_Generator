@@ -22,44 +22,53 @@ function generatePassword () {
         alert ("Error. Choice is not valid. Please try again.");
         return;
     }
-
-var collectionOfValids = [];
-var upperCaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" .split("");
-var lowerCaseChar = "abcdefghiklmnopqrsttuvwxtz" .split("");
-var numberChar = "0123456789" .split ("");
-var specialChar = "*&^%$#@!?><{}" .split("");
-
-
-// we need a confirm to ask the user if they want to use lowercase
-var lowerCaseConfirm = confirm("Do you want your password to include lowercase letters?");
-    if(lowerCaseConfirm === true) {
-        for (var i = 0; i < lowerCaseChar.length; i++) {
-            collectionOfValids.push(lowerCaseChar[i]);
+    var collectionOfValids = [];
+    var upperCaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" .split("");
+    var lowerCaseChar = "abcdefghiklmnopqrsttuvwxtz" .split("");
+    var numberChar = "0123456789" .split ("");
+    var specialChar = "*&^%$#@!?><{}" .split("");
+    
+    
+    // we need a confirm to ask the user if they want to use lowercase
+    var lowerCaseConfirm = confirm("Do you want your password to include lowercase letters?");
+        if(lowerCaseConfirm === true) {
+            for (var i = 0; i < lowerCaseChar.length; i++) {
+                collectionOfValids.push(lowerCaseChar[i]);
+            }
         }
-    }
-// we need a confirm to ask the user if they want to use uppercase
-var upperCaseConfirm = confirm("Do you want your password to include uppercase letters?");
-    if (upperCaseConfirm === true) {
-        for (var i = 0; i < upperCaseChar.length; i++) {
-            collectionOfValids.push(upperCaseChar[i]);
+    // we need a confirm to ask the user if they want to use uppercase
+    var upperCaseConfirm = confirm("Do you want your password to include uppercase letters?");
+        if (upperCaseConfirm === true) {
+            for (var i = 0; i < upperCaseChar.length; i++) {
+                collectionOfValids.push(upperCaseChar[i]);
+            }
         }
-    }
-// we need a confirm to ask the user if they want to use numeric
-var numberConfirm = confirm("Do you want your password to include numbers");
-    if (numberConfirm === true) {
-        for (var i = 0; i < numberChar.length; i++) {
-            collectionOfValids.push(numberChar[i]);
+    // we need a confirm to ask the user if they want to use numeric
+    var numberConfirm = confirm("Do you want your password to include numbers");
+        if (numberConfirm === true) {
+            for (var i = 0; i < numberChar.length; i++) {
+                collectionOfValids.push(numberChar[i]);
+            }
         }
-    }
-// we need a confirm to ask the user if they want to use special characters    
-var specialConfirm = confirm("Do you want your password to include special characters?");
-    if (specialConfirm === true) {
-        for (var i = 0; i < specialChar.length; i++) {
-            collectionOfValids.push(specialChar[i]);
+    // we need a confirm to ask the user if they want to use special characters    
+    var specialConfirm = confirm("Do you want your password to include special characters?");
+        if (specialConfirm === true) {
+            for (var i = 0; i < specialChar.length; i++) {
+                collectionOfValids.push(specialChar[i]);
+            }
         }
+    
+    //Creating a random password using what the user selected and inputed
+     var randomPassword = "";
+     for (var i = 0; i < lengthConfirm; i++) {
+         collectionOfValids[
+             Math.floor(Math.random() * collectionOfValids.length)];
+         randomPassword +=
+            collectionOfValids[
+                Math.floor(Math.random() * collectionOfValids.length)
+            ];
+        }
+     return randomPassword;
     }
-//add random password method here
-
-}
-
-generateBtn.addEventListener("click", writePassword);
+    
+    generateBtn.addEventListener("click", writePassword);
