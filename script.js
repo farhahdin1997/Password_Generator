@@ -22,6 +22,10 @@ function generatePassword () {
         alert ("Error. Choice is not valid. Please try again.");
         return;
     }
+    /*if(!passwordLength) {
+        alert("Required value");
+    
+      }*/
     var collectionOfValids = [];
     var upperCaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" .split("");
     var lowerCaseChar = "abcdefghiklmnopqrsttuvwxtz" .split("");
