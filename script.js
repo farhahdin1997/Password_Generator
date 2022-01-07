@@ -9,6 +9,12 @@ function writePassword() {
   passwordText.value = password;
 
 }
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+//Delcaring Variables
+var collectionOfValids = [];
+var upperCaseChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ" .split("");
+var lowerCaseChar = "abcdefghiklmnopqrsttuvwxtz" .split("");
+var numberChar = "0123456789" .split ("");
+var specialChar = "*&^%$#@!?><{}" .split("");
